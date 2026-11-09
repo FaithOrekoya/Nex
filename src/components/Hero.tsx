@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight, ShieldCheck, Cpu, Network } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -12,18 +13,17 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onPartnerClick }) =>
       id="home"
       className="relative min-h-[90vh] lg:min-h-[94vh] flex items-center justify-start overflow-hidden bg-[#0B2833]"
     >
-      {/* 1. Full-Width Logistics Photograph Background with Velmoraine Luxury Scrim */}
+      {/* 1. Full-Width Logistics Photograph Background with Luxury Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://res.cloudinary.com/byde2j9a/image/upload/v1794220292/22a1e201b6706d73a6d8ab0fe5f6f84c_xzbmvk.jpg"
+          src={IMAGES.heroBgCustom}
           onError={(e) => {
-            // Local fallback
-            e.currentTarget.src = '/src/assets/images/hero_bg_custom.jpg';
+            // Local fallback to high-res freight truck asset
+            e.currentTarget.src = IMAGES.heroFreightTruck;
           }}
           alt="Nevex Network commercial freight transport truck operating on an interstate logistics corridor"
           className="w-full h-full object-cover object-center lg:object-[70%_center] filter brightness-[0.92] contrast-[1.05]"
           loading="eager"
-          referrerPolicy="no-referrer"
         />
 
         {/* Velmoraine Left-to-Right Scrim for High Typography Legibility */}

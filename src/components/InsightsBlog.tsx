@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { InsightArticle } from '../types';
 import { ArticleModal } from './ArticleModal';
+import { IMAGES } from '../assets/images';
 
 export const InsightsBlog: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<InsightArticle | null>(null);
@@ -15,7 +16,7 @@ export const InsightsBlog: React.FC = () => {
       date: 'November 2026',
       readTime: '5 min read',
       category: 'Logistics Technology',
-      image: '/src/assets/images/logistics_dispatch_center_1794218267949.jpg',
+      image: IMAGES.logisticsDispatchCenter,
       content: [
         'Across interstate corridors, millions of freight tons move daily under the coordination of legacy communication systems. Dispatchers juggle dozens of phone calls, unstructured emails, and static PDF rate confirmations, creating blind spots that compound with every handoff.',
         'When unexpected road delays or dock staging bottlenecks occur, the latency of manual communication ripples through the entire supply chain. Shippers scramble for updates while carriers idle in detention, burning valuable hours of service.',
@@ -30,7 +31,7 @@ export const InsightsBlog: React.FC = () => {
       date: 'October 2026',
       readTime: '4 min read',
       category: 'Supply Chain Strategy',
-      image: '/src/assets/images/freight_intermodal_hub_1794218266955.jpg',
+      image: IMAGES.freightIntermodalHub,
       content: [
         'Traditional asset-heavy carriers are bound by physical fleet geography. If their trucks are stationed in the Midwest, servicing urgent Southeastern capacity demands creates expensive empty deadhead miles and operational resistance.',
         'A non-asset-based freight brokerage eliminates these capital rigidities. By pairing freight demand directly with verified, independent motor carriers already positioned within the target corridor, shippers achieve superior regional coverage and rate flexibility.',
@@ -45,7 +46,7 @@ export const InsightsBlog: React.FC = () => {
       date: 'September 2026',
       readTime: '6 min read',
       category: 'Carrier Economics',
-      image: '/src/assets/images/truck_fleet_1794217519362.jpg',
+      image: IMAGES.truckFleet,
       content: [
         'The independent truck carrier is the lifeblood of national freight, yet conventional payment cycles remain notoriously adversarial. Traditional freight brokers routinely hold settlement funds for 30, 45, or even 60 days following delivery.',
         'This liquidity drag forces smaller fleets and owner-operators to rely on punitive factoring services with steep discount fees, restricting fleet reinvestment and driver retention.',
@@ -92,10 +93,12 @@ export const InsightsBlog: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-md mb-6">
                 <img
                   src={featured.image}
+                  onError={(e) => {
+                    e.currentTarget.src = IMAGES.heroFreightTruck;
+                  }}
                   alt={featured.title}
                   className="w-full aspect-[16/10] object-cover object-center filter contrast-[1.04] transition-transform duration-700 group-hover:scale-103"
                   loading="lazy"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-4 left-4 bg-[#0B2833]/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-[#FFB703] border border-white/10">
                   Featured Analysis
@@ -135,10 +138,12 @@ export const InsightsBlog: React.FC = () => {
                   <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden bg-slate-900 shrink-0 border border-slate-200">
                     <img
                       src={article.image}
+                      onError={(e) => {
+                        e.currentTarget.src = IMAGES.freightIntermodalHub;
+                      }}
                       alt={article.title}
                       className="w-full h-full object-cover object-center filter contrast-[1.04] transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
-                      referrerPolicy="no-referrer"
                     />
                   </div>
 

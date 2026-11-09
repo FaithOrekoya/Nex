@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, ArrowLeft } from 'lucide-react';
 import { InsightArticle } from '../types';
+import { IMAGES } from '../assets/images';
 
 interface ArticleModalProps {
   article: InsightArticle | null;
@@ -39,6 +40,9 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
           <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-white/10">
             <img
               src={article.image}
+              onError={(e) => {
+                e.currentTarget.src = IMAGES.heroFreightTruck;
+              }}
               alt={article.title}
               className="w-full h-full object-cover object-center filter contrast-[1.05]"
             />

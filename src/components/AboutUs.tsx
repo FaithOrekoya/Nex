@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Cpu, Zap } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 export const AboutUs: React.FC = () => {
   return (
@@ -13,11 +14,13 @@ export const AboutUs: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-xl group">
               <img
-                src="/src/assets/images/freight_intermodal_hub_1794218266955.jpg"
+                src={IMAGES.freightIntermodalHub}
+                onError={(e) => {
+                  e.currentTarget.src = IMAGES.heroFreightTruck;
+                }}
                 alt="Nevex Network interstate logistics operations and freight transport infrastructure"
                 className="w-full aspect-[4/3] sm:aspect-[1/1] lg:aspect-[4/5] object-cover object-center filter contrast-[1.04] transition-transform duration-700 group-hover:scale-102"
                 loading="lazy"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B2833] via-[#0B2833]/30 to-transparent pointer-events-none" />
               

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 export const OurProcess: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(1);
@@ -76,11 +77,13 @@ export const OurProcess: React.FC = () => {
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-xl group">
               <img
-                src="/src/assets/images/logistics_dispatch_center_1794218267949.jpg"
+                src={IMAGES.logisticsDispatchCenter}
+                onError={(e) => {
+                  e.currentTarget.src = IMAGES.freightIntermodalHub;
+                }}
                 alt="Nevex Network modern logistics coordination desk monitoring real-time dispatch routes"
                 className="w-full aspect-[4/3] sm:aspect-[1/1] lg:aspect-[4/5] object-cover object-center filter contrast-[1.04] transition-transform duration-700 group-hover:scale-102"
                 loading="lazy"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B2833] via-[#0B2833]/40 to-transparent opacity-90" />
               

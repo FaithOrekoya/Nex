@@ -1,5 +1,6 @@
 import React from 'react';
 import { AlertCircle, ArrowRight } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 export const ChallengeSection: React.FC = () => {
   const challenges = [
@@ -54,11 +55,13 @@ export const ChallengeSection: React.FC = () => {
             <div className="sticky top-28">
               <div className="relative rounded-2xl overflow-hidden bg-[#171717] border border-neutral-300 shadow-xl">
                 <img
-                  src="/src/assets/images/warehouse_operations_1794217518003.jpg"
+                  src={IMAGES.warehouseOperations}
+                  onError={(e) => {
+                    e.currentTarget.src = IMAGES.commercialWarehouse;
+                  }}
                   alt="Modern high-density freight distribution operations and staging warehouse"
                   className="w-full aspect-[4/5] object-cover object-center filter contrast-[1.03]"
                   loading="lazy"
-                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Image overlay caption */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Lightbulb, Workflow, ArrowUpRight } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -41,11 +42,13 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="relative rounded-2xl overflow-hidden bg-[#1E1E1E] border border-[#2E2E2E] shadow-2xl">
               <img
-                src="/src/assets/images/hero_freight_truck_1794217516825.jpg"
+                src={IMAGES.heroFreightTruck}
+                onError={(e) => {
+                  e.currentTarget.src = IMAGES.freightIntermodalHub;
+                }}
                 alt="Nevex Network freight transportation infrastructure and corridor logistics"
                 className="w-full aspect-[16/10] object-cover object-center filter contrast-[1.05]"
                 loading="lazy"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#171717] via-transparent to-transparent opacity-80" />
               

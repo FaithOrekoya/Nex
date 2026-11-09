@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, Phone } from 'lucide-react';
+import { IMAGES } from '../assets/images';
 
 interface FinalCTAProps {
   onGetStartedClick: () => void;
@@ -12,7 +13,10 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onGetStartedClick }) => {
       {/* Full-Width Photographic Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/freight_intermodal_hub_1794218266955.jpg"
+          src={IMAGES.freightIntermodalHub}
+          onError={(e) => {
+            e.currentTarget.src = IMAGES.heroFreightTruck;
+          }}
           alt="Nevex Network intermodal freight terminal and transportation hub"
           className="w-full h-full object-cover object-center filter brightness-[0.25] contrast-[1.12]"
           loading="lazy"

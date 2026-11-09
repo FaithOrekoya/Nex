@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, ShieldCheck, Building2, Truck } from 'lucide-react';
 import { UserRole } from '../types';
+import { IMAGES } from '../assets/images';
 
 interface WhoWeServeProps {
   onSelectRole: (role: UserRole) => void;
@@ -37,11 +38,13 @@ export const WhoWeServe: React.FC<WhoWeServeProps> = ({ onSelectRole }) => {
             className="lg:col-span-8 relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-lg group cursor-pointer min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-6 sm:p-10"
           >
             <img
-              src="/src/assets/images/federal_logistics_1794217519367.jpg"
+              src={IMAGES.federalLogistics}
+              onError={(e) => {
+                e.currentTarget.src = IMAGES.heroFreightTruck;
+              }}
               alt="Federal logistics operations and secure government freight transportation staging"
               className="absolute inset-0 w-full h-full object-cover object-center filter contrast-[1.05] brightness-[0.75] transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B2833] via-[#0B2833]/60 to-transparent" />
 
@@ -71,11 +74,13 @@ export const WhoWeServe: React.FC<WhoWeServeProps> = ({ onSelectRole }) => {
             className="lg:col-span-4 relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-lg group cursor-pointer min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-6 sm:p-8"
           >
             <img
-              src="/src/assets/images/commercial_warehouse_1794217518984.jpg"
+              src={IMAGES.commercialWarehouse}
+              onError={(e) => {
+                e.currentTarget.src = IMAGES.warehouseOperations;
+              }}
               alt="Commercial enterprise warehouse logistics and dry van shipping pallets"
               className="absolute inset-0 w-full h-full object-cover object-center filter contrast-[1.05] brightness-[0.72] transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B2833] via-[#0B2833]/70 to-transparent" />
 
@@ -106,11 +111,13 @@ export const WhoWeServe: React.FC<WhoWeServeProps> = ({ onSelectRole }) => {
           >
             <div className="lg:col-span-5 relative min-h-[260px] sm:min-h-[300px] overflow-hidden bg-slate-900">
               <img
-                src="/src/assets/images/truck_fleet_1794217519362.jpg"
+                src={IMAGES.truckFleet}
+                onError={(e) => {
+                  e.currentTarget.src = IMAGES.heroFreightTruck;
+                }}
                 alt="Fleet of modern commercial freight trucks lined up at dawn in logistics depot"
                 className="w-full h-full object-cover object-center filter contrast-[1.03] transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0B2833]/40" />
             </div>

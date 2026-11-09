@@ -1,0 +1,8 @@
+{
+  "name": "NEVEX NETWORK",
+  "description": "Modern logistics technology and freight brokerage connecting federal and civilian freight demand with certified truck carriers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

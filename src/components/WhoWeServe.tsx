@@ -24,9 +24,6 @@ export const WhoWeServe: React.FC<WhoWeServeProps> = ({ onSelectRole }) => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#0B2833] tracking-tight leading-[1.12] text-balance">
             Connecting Public, Commercial, and Carrier Networks.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed font-sans">
-            Three distinct sectors unified under a modern, automated freight coordination layer.
-          </p>
         </div>
 
         {/* Photographic Collage with Distinct Image Sizes and Proportions (No 3-card grid) */}

@@ -54,9 +54,6 @@ export const HowItWorks: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-white tracking-tight leading-[1.12] text-balance">
             How Nevex Connects Freight and Carriers.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-sans max-w-2xl">
-            A three-stage connected coordination lifecycle engineered to replace fragmented communication with automated precision.
-          </p>
         </div>
 
         {/* Horizontal Connected Timeline (No Cards) */}

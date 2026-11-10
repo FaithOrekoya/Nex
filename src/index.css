@@ -52,3 +52,56 @@ h1, h2, h3, h4, h5, h6, .font-display {
 ::-webkit-scrollbar-thumb:hover {
   background: #FFB703;
 }
+
+/* Highway road velocity & vehicle movement animations (5s loop) */
+@keyframes roadStreak {
+  0% {
+    transform: translate3d(-10%, -60%, 0) skewX(-32deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  85% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(25%, 120%, 0) skewX(-32deg);
+    opacity: 0;
+  }
+}
+
+@keyframes vehicleChassis {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(0, -1px, 0);
+  }
+  40% {
+    transform: translate3d(0, 0.8px, 0);
+  }
+  60% {
+    transform: translate3d(0, -0.6px, 0);
+  }
+  80% {
+    transform: translate3d(0, 0.4px, 0);
+  }
+}
+
+@keyframes highwayGleam {
+  0% {
+    transform: translate3d(-150%, 0, 0) skewX(-25deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.28;
+  }
+  70% {
+    opacity: 0.28;
+  }
+  100% {
+    transform: translate3d(250%, 0, 0) skewX(-25deg);
+    opacity: 0;
+  }
+}

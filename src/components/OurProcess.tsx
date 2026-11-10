@@ -65,9 +65,6 @@ export const OurProcess: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#0B2833] tracking-tight leading-[1.12] text-balance">
             Six Steps from Freight Tender to Delivery.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-sans">
-            A repeatable operational sequence engineered for precision dispatch, active risk mitigation, and continuous corridor visibility.
-          </p>
         </div>
 
         {/* Asymmetrical Layout: One Large Photograph on Left, Vertical Explanations on Right */}
